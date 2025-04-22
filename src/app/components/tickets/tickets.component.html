@@ -1,9 +1,10 @@
 <app-db-container
-  imageSrc="list.png"
-  imageAlt="A list of items"
+  [image]="headerImg()"
   title="Support Tickets"
 >
   <div id="status">
     <p>Todo...</p>
   </div>
+  <new-ticket-form />
+  <db-ticket-list />
 </app-db-container>

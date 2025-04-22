@@ -1,4 +1,5 @@
-import { Component, Input } from "@angular/core";
+import { Component, input } from "@angular/core";
+import type { ImageObj } from "./dbcontainer.model";
 
 @Component({
   selector: 'app-db-container',
@@ -9,7 +10,6 @@ import { Component, Input } from "@angular/core";
   ],
 })
 export class DbContainerComponent {
-  @Input() imageSrc: string | undefined;
-  @Input() imageAlt: string | undefined;
-  @Input() title: string | undefined;
+  image = input.required<ImageObj>();
+  title = input.required<string>();
 }

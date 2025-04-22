@@ -1,5 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, computed, signal } from "@angular/core";
 import { DbContainerComponent } from "../shared/dbcontainer.component";
+import type { TrafficDataPoint } from "./traffic.model";
+import type { ImageObj } from "../shared/dbcontainer.model";
 
 
 
@@ -11,7 +13,7 @@ import { DbContainerComponent } from "../shared/dbcontainer.component";
   imports: [DbContainerComponent],
 })
 export class TrafficComponent {
-  dummyTrafficData = [
+  dummyTrafficData = signal<TrafficDataPoint[]>([
     {
       id: 'd1',
       value: 433,
@@ -40,6 +42,12 @@ export class TrafficComponent {
       id: 'd47',
       value: 589,
     },
-  ];
-  maxTraffic = Math.max(...this.dummyTrafficData.map((data) => data.value));
+  ]);
+  maxTraffic = computed<number>(() =>
+    Math.max(...this.dummyTrafficData().map((data) => data.value))
+  );
+  headerImg = signal<ImageObj>({
+    src: 'globe.png',
+    alt: 'A globe',
+  });
 }

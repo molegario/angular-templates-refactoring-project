@@ -44,13 +44,6 @@ p:last-of-type {
   color: #625e67;
 }
 
-/* h2 {
-  margin: 0;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  color: #504e50;
-} */
-
 button {
   display: inline-block;
   padding: 0.65rem 1.35rem;

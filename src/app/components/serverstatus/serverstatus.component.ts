@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, signal } from "@angular/core";
 import { DbContainerComponent } from "../shared/dbcontainer.component";
+import type { ImageObj } from "../shared/dbcontainer.model";
 
 @Component({
   selector: 'db-server-status',
@@ -9,5 +10,9 @@ import { DbContainerComponent } from "../shared/dbcontainer.component";
   imports: [DbContainerComponent],
 })
 export class ServerStatusComponent {
-  currentStatus = 'online';
+  currentStatus = signal<string>('online');
+  headerImg = signal<ImageObj>({
+    src: 'status.png',
+    alt: 'A signal symbol',
+  });
 }
