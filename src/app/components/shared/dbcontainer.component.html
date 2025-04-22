@@ -1,0 +1,15 @@
+<div class="dashboard-item">
+  <article>
+    @if (imageSrc || title) {
+      <header>
+        @if (imageSrc && imageAlt) {
+          <img [src]="imageSrc" [alt]="imageAlt" />
+        }
+        @if (title) {
+          <h2>{{ title }}</h2>
+        }
+      </header>
+    }
+    <ng-content />
+  </article>
+</div>
