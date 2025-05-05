@@ -1,4 +1,4 @@
-#traffic {
+:host {
   display: block;
   width: 15rem;
 }
@@ -20,7 +20,7 @@
 }
 
 @media (min-width: 768px) {
-  #traffic {
+  :host {
     width: 20rem;
   }
 }

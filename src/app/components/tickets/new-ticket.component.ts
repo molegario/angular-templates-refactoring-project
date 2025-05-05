@@ -2,13 +2,19 @@ import { Component, signal } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import type { Ticket } from "./ticket.model";
 import { TicketService } from "./ticket.service";
+import { ButtonComponent } from "../shared/button.component";
+import { ControlComponent } from "../shared/control.component";
 
 @Component({
   selector: 'new-ticket-form',
   standalone: true,
   templateUrl: './new-ticket.component.html',
   styleUrls: ['./new-ticket.component.css'],
-  imports: [FormsModule],
+  imports: [
+    FormsModule,
+    ButtonComponent,
+    ControlComponent
+],
 })
 export class NewTicketComponent {
   ticketTitle = signal<string>('');

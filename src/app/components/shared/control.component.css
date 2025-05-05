@@ -1,20 +1,13 @@
-#new-ticket {
-  width: 15rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-/* #new-ticket label {
+.control label {
   display: block;
   font-size: 0.8rem;
   font-weight: bold;
   margin-bottom: 0.15rem;
   color: #4f4b53;
-} */
+}
 
-/* #new-ticket input,
-#new-ticket textarea {
+.control input,
+.control textarea {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #ccc;
@@ -22,4 +15,4 @@
   font: inherit;
   font-size: 0.9rem;
   color: #4f4b53;
-} */
+}

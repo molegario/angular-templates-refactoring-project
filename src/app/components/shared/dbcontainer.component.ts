@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ViewEncapsulation } from "@angular/core";
 import type { ImageObj } from "./dbcontainer.model";
 
 @Component({
@@ -6,8 +6,11 @@ import type { ImageObj } from "./dbcontainer.model";
   standalone: true,
   templateUrl: './dbcontainer.component.html',
   styleUrls: ['./dbcontainer.component.css'],
-  imports: [
-  ],
+  imports: [],
+  // encapsulation: ViewEncapsulation.None,
+  // host: {
+  //   class: 'dashboard-item',
+  // },
 })
 export class DbContainerComponent {
   image = input.required<ImageObj>();

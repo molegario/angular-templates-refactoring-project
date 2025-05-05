@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import { ServerStatusComponent } from "./components/serverstatus/serverstatus.component";
 import { TrafficComponent } from "./components/traffic/traffic.component";
 import { TicketsComponent } from "./components/tickets/tickets.component";
+import { DbContainerComponent } from "./components/shared/dbcontainer.component";
+import { ImageObj } from './components/shared/dbcontainer.model';
 
 @Component({
   selector: 'app-root',
@@ -12,10 +14,29 @@ import { TicketsComponent } from "./components/tickets/tickets.component";
     HeaderComponent,
     ServerStatusComponent,
     TrafficComponent,
-    TicketsComponent
+    TicketsComponent,
+    DbContainerComponent
 ],
 })
 export class AppComponent {
+  statusIcon = signal<ImageObj>(
+    {
+      src: 'status.png',
+      alt: 'A signal symbol',
+    }
+  );
+  trafficIcon = signal<ImageObj>(
+    {
+      src: 'globe.png',
+      alt: 'A globe',
+    }
+  )
+  ticketsIcon = signal<ImageObj>(
+    {
+      src: 'list.png',
+      alt: 'A list of items',
+    }
+  )
   // dummyTrafficData = [
   //   {
   //     id: 'd1',

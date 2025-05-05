@@ -1,8 +1,47 @@
 <app-header />
 <main>
   <div id="dashboard">
-    <db-server-status />
-    <db-traffic />
-    <db-tickets />
+
+    <app-db-container
+      [image]="statusIcon()"
+      title="Server Status"
+    >
+      <db-server-status />
+    </app-db-container>
+
+
+
+    <app-db-container
+      [image]="trafficIcon()"
+      title="Traffic"
+    >
+
+      <db-traffic />
+
+    </app-db-container>
+
+    <app-db-container
+      [image]="ticketsIcon()"
+      title="Support Tickets"
+    >
+      <db-tickets />
+    </app-db-container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
 </main>

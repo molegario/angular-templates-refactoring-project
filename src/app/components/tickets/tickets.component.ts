@@ -1,6 +1,6 @@
-import { Component, signal } from "@angular/core";
-import { DbContainerComponent } from "../shared/dbcontainer.component";
-import { ImageObj } from "../shared/dbcontainer.model";
+import { Component } from "@angular/core";
+// import { DbContainerComponent } from "../shared/dbcontainer.component";
+// import { ImageObj } from "../shared/dbcontainer.model";
 import { NewTicketComponent } from "./new-ticket.component";
 import { TicketListComponent } from "./ticket-list.component";
 
@@ -9,11 +9,11 @@ import { TicketListComponent } from "./ticket-list.component";
   templateUrl: './tickets.component.html',
   styleUrls: ['./tickets.component.css'],
   standalone: true,
-  imports: [DbContainerComponent, NewTicketComponent, TicketListComponent],
+  imports: [NewTicketComponent, TicketListComponent],
 })
 export class TicketsComponent {
-  headerImg = signal<ImageObj>({
-    src: 'list.png',
-    alt: 'A list of items',
-  });
+  // headerImg = signal<ImageObj>({
+  //   src: 'list.png',
+  //   alt: 'A list of items',
+  // });
 }
