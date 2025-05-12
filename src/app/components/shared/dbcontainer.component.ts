@@ -7,10 +7,6 @@ import type { ImageObj } from "./dbcontainer.model";
   templateUrl: './dbcontainer.component.html',
   styleUrls: ['./dbcontainer.component.css'],
   imports: [],
-  // encapsulation: ViewEncapsulation.None,
-  // host: {
-  //   class: 'dashboard-item',
-  // },
 })
 export class DbContainerComponent {
   image = input.required<ImageObj>();
