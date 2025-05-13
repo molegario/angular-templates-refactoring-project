@@ -2,10 +2,10 @@ import { Component, computed, input } from "@angular/core";
 
 @Component({
   selector: 'db-graph-bar',
-  standalone: true,
+  // standalone: true,
   templateUrl: './graphbar.component.html',
   styleUrls: ['./graphbar.component.css'],
-  imports: [],
+  // imports: [],
 })
 export class GraphBarComponent {
   val = input.required<number>();

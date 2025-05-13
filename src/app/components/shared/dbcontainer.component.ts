@@ -3,10 +3,10 @@ import type { ImageObj } from "./dbcontainer.model";
 
 @Component({
   selector: 'app-db-container',
-  standalone: true,
+  // standalone: true,
   templateUrl: './dbcontainer.component.html',
   styleUrls: ['./dbcontainer.component.css'],
-  imports: [],
+  // imports: [],
 })
 export class DbContainerComponent {
   image = input.required<ImageObj>();

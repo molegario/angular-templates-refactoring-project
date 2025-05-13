@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import { ServerStatusComponent } from "./components/serverstatus/serverstatus.component";
-import { TrafficComponent } from "./components/traffic/traffic.component";
-import { TicketsComponent } from "./components/tickets/tickets.component";
-import { DbContainerComponent } from "./components/shared/dbcontainer.component";
-import { ImageObj } from './components/shared/dbcontainer.model';
 import { TicketsModule } from './components/tickets/tickets.module';
+import { TrafficModule } from './components/traffic/traffic.module';
+import { SharedModule } from './components/shared/shared.module';
+
+import type { ImageObj } from './components/shared/dbcontainer.model';
 
 @Component({
   selector: 'app-root',
@@ -14,11 +14,10 @@ import { TicketsModule } from './components/tickets/tickets.module';
   imports: [
     HeaderComponent,
     ServerStatusComponent,
-    TrafficComponent,
-    // TicketsComponent,
+    TrafficModule,
     TicketsModule,
-    DbContainerComponent
-],
+    SharedModule,
+  ],
 })
 export class AppComponent {
   statusIcon = signal<ImageObj>(
@@ -32,43 +31,11 @@ export class AppComponent {
       src: 'globe.png',
       alt: 'A globe',
     }
-  )
+  );
   ticketsIcon = signal<ImageObj>(
     {
       src: 'list.png',
       alt: 'A list of items',
     }
-  )
-  // dummyTrafficData = [
-  //   {
-  //     id: 'd1',
-  //     value: 433,
-  //   },
-  //   {
-  //     id: 'd2',
-  //     value: 260,
-  //   },
-  //   {
-  //     id: 'd3',
-  //     value: 290,
-  //   },
-  //   {
-  //     id: 'd4',
-  //     value: 410,
-  //   },
-  //   {
-  //     id: 'd5',
-  //     value: 397,
-  //   },
-  //   {
-  //     id: 'd6',
-  //     value: 488,
-  //   },
-  //   {
-  //     id: 'd47',
-  //     value: 589,
-  //   },
-  // ];
-  // maxTraffic = Math.max(...this.dummyTrafficData.map((data) => data.value));
-  // currentStatus = 'online';
+  );
 }

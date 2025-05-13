@@ -7,7 +7,7 @@ import type { TrafficDataPoint } from "./traffic.model";
 
 @Component({
   selector: 'db-traffic',
-  standalone: true,
+  // standalone: true,
   templateUrl: './traffic.component.html',
   styleUrls: ['./traffic.component.css'],
   // imports: [DbContainerComponent],

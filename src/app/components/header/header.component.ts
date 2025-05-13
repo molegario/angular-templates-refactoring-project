@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { ButtonComponent } from "../shared/button.component";
+import { SharedModule } from "../shared/shared.module";
 
 @Component({
   selector: 'app-header',
@@ -7,7 +7,7 @@ import { ButtonComponent } from "../shared/button.component";
   styleUrls: ['./header.component.css'],
   standalone: true,
   imports: [
-    ButtonComponent,
+    SharedModule,
   ],
 })
 export class HeaderComponent {}
