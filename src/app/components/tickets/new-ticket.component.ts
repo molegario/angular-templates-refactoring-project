@@ -1,16 +1,13 @@
-import { AfterViewInit, Component, ElementRef, OnInit, signal, viewChild, ViewChild } from "@angular/core";
-import { FormsModule } from "@angular/forms";
+import { AfterViewInit, Component, ElementRef, OnInit, signal, viewChild } from "@angular/core";
 import type { Ticket } from "./ticket.model";
 import { TicketService } from "./ticket.service";
-import { ButtonComponent } from "../shared/button.component";
-import { ControlComponent } from "../shared/control.component";
 
 @Component({
   selector: 'new-ticket-form',
-  standalone: true,
+  // standalone: true,
   templateUrl: './new-ticket.component.html',
   styleUrls: ['./new-ticket.component.css'],
-  imports: [FormsModule, ButtonComponent, ControlComponent],
+  // imports: [FormsModule, ButtonComponent, ControlComponent],
 })
 export class NewTicketComponent implements OnInit, AfterViewInit {
   ticketTitle = signal<string>('');

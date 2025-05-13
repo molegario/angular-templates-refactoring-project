@@ -2,11 +2,13 @@
   <ul>
     @for (ticket of tickets(); track ticket.id) {
       <li>
-        <div>
+        <div appTicketItem [ticket]="ticket">
           <h2>{{ ticket.title }}</h2>
           <p>{{ ticket.description }}</p>
         </div>
       </li>
+    } @empty() {
+      <p id="no-tickets">no tickets</p>
     }
   </ul>
 </div>

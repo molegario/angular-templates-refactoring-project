@@ -5,6 +5,7 @@ import { TrafficComponent } from "./components/traffic/traffic.component";
 import { TicketsComponent } from "./components/tickets/tickets.component";
 import { DbContainerComponent } from "./components/shared/dbcontainer.component";
 import { ImageObj } from './components/shared/dbcontainer.model';
+import { TicketsModule } from './components/tickets/tickets.module';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { ImageObj } from './components/shared/dbcontainer.model';
     HeaderComponent,
     ServerStatusComponent,
     TrafficComponent,
-    TicketsComponent,
+    // TicketsComponent,
+    TicketsModule,
     DbContainerComponent
 ],
 })

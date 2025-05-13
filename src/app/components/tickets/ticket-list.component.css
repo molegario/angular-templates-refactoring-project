@@ -1,3 +1,4 @@
+
 #tickets {
   display: flex;
   flex-direction: column;
@@ -24,6 +25,19 @@
   margin: 0;
   font-size: 1.1rem;
   color: #38343c;
+}
+
+#no-tickets {
+  /* box-sizing: border-box; */
+  /* padding-bottom: 1rem; */
+  /* border-bottom: 1px grey solid; */
+  /* margin-bottom: 1rem; */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 768px) {

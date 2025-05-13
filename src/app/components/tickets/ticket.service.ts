@@ -14,4 +14,14 @@ export class TicketService {
   addTicket(ticket: Ticket): void {
     this.Tickets.update((tickets) => [...tickets, ticket]);
   }
+
+  updateTicketById(id: string, updatedTicket: Ticket): void {
+    this.Tickets.update((tickets) => {
+      const ticketIndex = tickets.findIndex((ticket) => ticket.id === id);
+      if (ticketIndex !== -1) {
+        tickets[ticketIndex] = { ...tickets[ticketIndex], ...updatedTicket };
+      }
+      return [...tickets];
+    });
+  }
 }
